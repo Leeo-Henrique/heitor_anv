@@ -37,7 +37,7 @@
     </div>
 
     <!-- Pop-up -->
-    <div id="popup">
+    <aside id="popup">
       Clique na música para começar a tocar!
       <br />
       <!-- Áudio dentro do pop-up -->
@@ -49,21 +49,7 @@
   </body>
 
   <script>
-    gsap.fromTo(
-      "#asd8",
-      {
-        x: "-100%", // A imagem vai para a posição inicial no centro da tela
-        y: "100%", // E se centraliza verticalmente
-        scale: 0, // Aumenta muito a escala da imagem
-      },
-      {
-        x: "800%", // A imagem vai para a posição inicial no centro da tela
-        y: "200%", // E se centraliza verticalmente
-        scale: 15, // Aumenta muito a escala da imagem
-        duration: 15, // Duração da animação
-        ease: "power2.inOut", // Tipo de suavização
-      }
-    );
+    
     document.querySelectorAll("#container img").forEach(function (img) {
       // Adiciona um evento de clique a cada imagem
       img.addEventListener("click", function () {
@@ -134,6 +120,21 @@
     musica.currentTime = 40; // Começa nos 40 segundos
     musica.addEventListener("play", function () {
       popup.style.display = "none"; // Esconde o pop-up
+      gsap.fromTo(
+      "#asd8",
+      {
+        x: "-100%", // A imagem vai para a posição inicial no centro da tela
+        y: "100%", // E se centraliza verticalmente
+        scale: 0, // Aumenta muito a escala da imagem
+      },
+      {
+        x: "800%", // A imagem vai para a posição inicial no centro da tela
+        y: "200%", // E se centraliza verticalmente
+        scale: 15, // Aumenta muito a escala da imagem
+        duration: 15, // Duração da animação
+        ease: "power2.inOut", // Tipo de suavização
+      }
+    );
     });
   </script>
 </html>
