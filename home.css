@@ -1,4 +1,4 @@
-*{
+* {
   overflow: hidden;
 }
 body {
@@ -20,12 +20,9 @@ body {
   position: absolute;
   top: 50%; /* Coloca a imagem no meio da altura */
   left: 50%; /* Coloca a imagem no meio da largura */
-  transform: translate(
-    -50%,
-    -95%
-  ); /* Ajusta a posição para garantir o centro perfeito */
+  transform: translate(-50%, -95%);
   min-width: 500px;
-  max-width: 90%; 
+  max-width: 90%;
   max-height: 90%;
 }
 #asd3 {
@@ -67,11 +64,10 @@ body {
   ); /* Ajusta a posição para garantir o centro perfeito */
   min-width: 100px;
   max-width: 150px;
-
 }
 #asd8 {
   position: absolute;
-   /*top: 50%; /* Coloca a imagem no meio da altura
+  /*top: 50%; /* Coloca a imagem no meio da altura
   left: 30%; /* Coloca a imagem no meio da largura 
   transform: translate(
     -50%,
@@ -84,7 +80,7 @@ body {
 /* audio{
   display: none;
 } */
-div{
+div {
   display: flex;
   position: absolute;
   top: 30%; /* Coloca a imagem no meio da altura */
@@ -93,7 +89,7 @@ div{
     -50%,
     60%
   ); /* Ajusta a posição para garantir o centro perfeito */
-  min-width:300px;
+  min-width: 300px;
   max-width: 150px;
   height: 200px;
   align-items: center;
@@ -101,13 +97,62 @@ div{
 }
 
 @keyframes pulse {
-      0% {
-        transform: scale(1); /* Tamanho original */
-      }
-      50% {
-        transform: scale(1.21); /* Aumenta um pouco o tamanho */
-      }
-      100% {
-        transform: scale(1); /* Volta ao tamanho original */
-      }
-    }
+  0% {
+    transform: scale(1); /* Tamanho original */
+  }
+  50% {
+    transform: scale(1.21); /* Aumenta um pouco o tamanho */
+  }
+  100% {
+    transform: scale(1); /* Volta ao tamanho original */
+  }
+}
+
+#popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120%;
+  height: 120%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  z-index: 1000;
+  /* display: block; */
+}
+
+/* Opção de fundo cinza claro para a tela inteira */
+/* #overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: block;
+} */
+#play-button {
+  background-color: #4caf50; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 15px 32px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#play-button:hover {
+  background-color: #45a049; /* Cor ao passar o mouse */
+}
