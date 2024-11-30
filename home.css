@@ -67,14 +67,7 @@ body {
 }
 #asd8 {
   position: absolute;
-  /*top: 50%; /* Coloca a imagem no meio da altura
-  left: 30%; /* Coloca a imagem no meio da largura 
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Ajusta a posição para garantir o centro perfeito 
-  min-width: 200px;
-  max-width: 200px; */
+  opacity: 0;
   object-fit: cover; /* Garante que a imagem não distorça */
 }
 /* audio{
