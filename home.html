@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <title>Aniversario Heitor</title>
+  </head>
+  <body>
+    <!-- <img src="./assets/asd1.png" alt="Imagem 1" /> -->
+    <img id="asd2" src="./assets/asd2.png" alt="Imagem 2" />
+
+    <img id="asd5" src="./assets/asd5.png" alt="Imagem 5" />
+
+    <img id="asd7" src="./assets/asd7.png" alt="Imagem 7" />
+    <img id="asd8" src="./assets/asd8.png" alt="Imagem 8" />
+    <div id="container">
+      <img
+        id="asd6"
+        src="./assets/asd6.png"
+        alt="Imagem 6"
+        data-url="https://docs.google.com/forms/d/e/1FAIpQLScpdQ9Hcj9SqnJPUQ9xGKm0DtdbUSreQWOx7zecjpMrWjlOAg/viewform"
+      />
+      <img
+        id="asd3"
+        src="./assets/asd3.png"
+        alt="Imagem 3"
+        data-url="https://www.google.com.br/maps/place/Star+Eventos+Contagem/@-19.9385996,-44.0589556,17z/data=!3m1!4b1!4m6!3m5!1s0xa695fc54a8ed03:0x7205939477dd745b!8m2!3d-19.9386047!4d-44.0563807!16s%2Fg%2F11rsspgfxj?coh=225984&entry=tts&g_ep=EgoyMDI0MTEyNC4xIPu8ASoASAFQAw%3D%3D"
+      />
+      <img
+        id="asd4"
+        src="./assets/asd4.png"
+        alt="Imagem 4"
+        data-url="https://heitor1anoaniversario.my.canva.site/dagx9tgbpqq"
+      />
+    </div>
+
+    <audio id="musica" controls autoplay loop>
+      <source src="assets/victory-mlbb.mp3" type="audio/mp3" />
+      Musica de parabens
+    </audio>
+  </body>
+  <script>
+    gsap.fromTo(
+      "#asd8",
+      {
+        x: "-300%", // A imagem vai para a posição inicial no centro da tela
+        y: "100%", // E se centraliza verticalmente
+        scale: 0, // Aumenta muito a escala da imagem
+      },
+      {
+        x: "600%", // A imagem vai para a posição inicial no centro da tela
+        y: "200%", // E se centraliza verticalmente
+        scale: 5, // Aumenta muito a escala da imagem
+        duration: 50, // Duração da animação
+        ease: "power4.out", // Tipo de suavização
+      }
+    );
+    document.querySelectorAll("#container img").forEach(function (img) {
+      // Adiciona um evento de clique a cada imagem
+      img.addEventListener("click", function () {
+        // Obtém o valor do atributo data-url
+        var url = img.getAttribute("data-url");
+        // Redireciona para o link armazenado no atributo data-url
+        window.open(url, "_blank");
+      });
+    });
+
+    gsap.fromTo(
+      "#asd7",
+      {
+        y: -1200, // Começa 200px acima da tela
+        opacity: 0, // Começa invisível
+      },
+      {
+        y: -400, // Finaliza na posição original (sem deslocamento vertical)
+        opacity: 1, // Fica completamente visível
+        duration: 2, // Duração da animação (2 segundos)
+        ease: "power2.out", // Suavização da animação
+        onComplete: function () {
+          gsap.to("#asd7", {
+            rotation: 360, // Gira 360 graus
+            duration: 5, // Duração da rotação
+            ease: "power2.out", // Suavização
+            repeat: -1,
+          });
+        },
+      }
+    );
+
+    gsap.to("#asd2", {
+      rotation: 15, // Maior rotação para um balanço mais forte
+      yoyo: true, // Repetir o movimento
+      repeat: -1, // Repete infinitamente
+      duration: 1.5, // Duração reduzida para um movimento mais rápido
+      ease: "power2.inOut", // Movimento mais pronunciado
+    });
+
+    gsap.fromTo(
+      "#asd5",
+      {
+      },
+      {
+        y: -330, // Finaliza na posição original (sem deslocamento vertical)
+        opacity: 1, // Fica completamente visível
+        ease: "power1.inOut", // Suaviza o movimento
+        repeat: -1, // Repete a animação infinitamente
+        yoyo: true, // Faz o movimento de ida e volta
+        onComplete: function () {
+          gsap.to("#asd7", {
+            rotation: 360, // Gira 360 graus
+            duration: 5, // Duração da rotação
+            ease: "power2.out", // Suavização
+            repeat: -1,
+          });
+        },
+      }
+    );
+    var musica = document.getElementById("musica");
+
+    // Define o volume da música (opcional)
+    musica.volume = 0.3; // Volume de 0 a 1
+
+    // Define o tempo inicial da música para 40 segundos
+    musica.currentTime = 40; // Começa nos 40 segundos
+
+    // Garantir que a música comece a tocar
+    musica.play();
+  </script>
+</html>

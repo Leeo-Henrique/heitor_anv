@@ -1,0 +1,113 @@
+*{
+  overflow: hidden;
+}
+body {
+  background-image: url("assets/image.png"); /* Caminho para a imagem */
+  background-size: cover; /* A imagem vai cobrir toda a tela */
+  background-position: center center; /* A imagem fica centralizada */
+  background-attachment: fixed; /* A imagem de fundo vai ficar fixa enquanto a página rola */
+  margin: 0; /* Remove margens padrões */
+  height: 100vh; /* Garante que o body tenha altura de 100% da tela */
+  position: relative;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  color: white; /* Cor do texto para garantir que ele fique visível */
+  font-family: Arial, sans-serif; /* Fonte limpa e legível */
+  overflow: hidden;
+  text-align: center; /* Alinha o texto ao centro */
+}
+#asd2 {
+  position: absolute;
+  top: 50%; /* Coloca a imagem no meio da altura */
+  left: 50%; /* Coloca a imagem no meio da largura */
+  transform: translate(
+    -50%,
+    -95%
+  ); /* Ajusta a posição para garantir o centro perfeito */
+  min-width: 500px;
+  max-width: 90%; 
+  max-height: 90%;
+}
+#asd3 {
+  max-width: 100px;
+  max-height: 90px;
+  cursor: pointer;
+  animation: pulse 1s infinite ease-in-out;
+}
+#asd4 {
+  max-width: 100px;
+  max-height: 90px;
+  cursor: pointer;
+  animation: pulse 1s infinite ease-in-out;
+}
+#asd6 {
+  max-width: 100px;
+  max-height: 90px;
+  cursor: pointer;
+  animation: pulse 1s infinite ease-in-out;
+}
+#asd5 {
+  position: absolute;
+  top: 50%; /* Coloca a imagem no meio da altura */
+  left: 15%; /* Coloca a imagem no meio da largura */
+  transform: translate(
+    -50%,
+    -230%
+  ); /* Ajusta a posição para garantir o centro perfeito */
+  min-width: 100px;
+  max-width: 150px;
+}
+#asd7 {
+  position: absolute;
+  top: 50%; /* Coloca a imagem no meio da altura */
+  left: 75%; /* Coloca a imagem no meio da largura */
+  transform: translate(
+    -50%,
+    -230%
+  ); /* Ajusta a posição para garantir o centro perfeito */
+  min-width: 100px;
+  max-width: 150px;
+
+}
+#asd8 {
+  position: absolute;
+   /*top: 50%; /* Coloca a imagem no meio da altura
+  left: 30%; /* Coloca a imagem no meio da largura 
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ajusta a posição para garantir o centro perfeito 
+  min-width: 200px;
+  max-width: 200px; */
+  object-fit: cover; /* Garante que a imagem não distorça */
+}
+/* audio{
+  display: none;
+} */
+div{
+  display: flex;
+  position: absolute;
+  top: 30%; /* Coloca a imagem no meio da altura */
+  left: 50%; /* Coloca a imagem no meio da largura */
+  transform: translate(
+    -50%,
+    60%
+  ); /* Ajusta a posição para garantir o centro perfeito */
+  min-width:300px;
+  max-width: 150px;
+  height: 200px;
+  align-items: center;
+  /* animation: pulse 1.5s infinite ease-in-out; */
+}
+
+@keyframes pulse {
+      0% {
+        transform: scale(1); /* Tamanho original */
+      }
+      50% {
+        transform: scale(1.21); /* Aumenta um pouco o tamanho */
+      }
+      100% {
+        transform: scale(1); /* Volta ao tamanho original */
+      }
+    }
